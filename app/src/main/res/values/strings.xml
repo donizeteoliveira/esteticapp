@@ -7,4 +7,8 @@
     <string name="login_password">Senha</string>
     <string name="error_login">Usuário ou senha inválida</string>
     <string name="error_realtime_get_data">Não foi possível recuperar os dados do banco remoto</string>
+
+    <string name="successfully_insert_produto">Registro Incluindo com Sucesso</string>
+    <string name="error_insert_produto">Registro não foi concluido</string>
+
 </resources>

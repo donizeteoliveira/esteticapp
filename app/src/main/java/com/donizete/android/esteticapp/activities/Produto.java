@@ -1,9 +1,13 @@
 package com.donizete.android.esteticapp.activities;
 
+
+import java.io.Serializable;
+import io.realm.RealmObject;
+
 /**
  * Created by Donizete on 14/10/2016.
  */
-public class Produto {
+public class Produto extends RealmObject {
     private int id;
     private String txtNome;
     private String txtCategoria;

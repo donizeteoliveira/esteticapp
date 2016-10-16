@@ -3,6 +3,7 @@ package com.donizete.android.esteticapp.util;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 
+import com.donizete.android.esteticapp.R;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;

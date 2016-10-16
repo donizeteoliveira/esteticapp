@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
+import com.donizete.android.esteticapp.R;
 import com.donizete.android.esteticapp.activities.Produto;
 
 import java.text.DecimalFormat;
@@ -29,18 +30,20 @@ public class ProdutosAdapter extends ArrayAdapter<Produto> {
         View formatoItemLista = mInflater.inflate(R.layout.layout_lista_produto, null);
         Produto p = listaItens.get(position);
 
-        TextView txtProductName = (TextView) formatoItemLista.findViewById(R.id.txtProductName);
-        txtProductName.setText(p.getTxtNome());
+        TextView txtLayoutName = (TextView) formatoItemLista.findViewById(R.id.txtLName);
+        txtLayoutName.setText(p.getTxtNome());
 
-        TextView txtProductCategory = (TextView) formatoItemLista.findViewById(R.id.txtProductCategory);
-        txtProductCategory.setText(p.getTxtFornecedor());
+        TextView txtLayoutFornecedor = (TextView) formatoItemLista.findViewById(R.id.txtLFornecedor);
+        txtLayoutFornecedor.setText(p.getTxtFornecedor());
 
-        TextView txtProductPriceClient = (TextView) formatoItemLista.findViewById(R.id.txtProductPriceClient);
+        TextView txtLayoutPriceClient = (TextView) formatoItemLista.findViewById(R.id.txtLPrice);
         DecimalFormat fmt = new DecimalFormat("R$ #,##0.00");
-        txtProductPriceClient.setText(fmt.format(p.getVlCliente()));
+        txtLayoutPriceClient.setText(fmt.format(p.getVlCliente()));
+
+        TextView txtLayoutQuantidfade = (TextView) formatoItemLista.findViewById(R.id.txtLQuantidade);
+        txtLayoutQuantidfade.setText(p.getTxtFornecedor());
 
         return formatoItemLista;
-
 
     }
 }

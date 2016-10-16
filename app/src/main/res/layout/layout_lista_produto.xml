@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:id="@+id/imgProduct"
+        android:src="@mipmap/ic_launcher" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nome"
+            android:id="@+id/txtLName"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            android:textIsSelectable="false" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Fornecedor"
+            android:id="@+id/txtLFornecedor"
+            android:layout_marginTop="5dp"
+            android:textSize="12sp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Preço"
+        android:id="@+id/txtLPrice"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="5dp"
+        android:textStyle="bold"
+        android:textColorLink="#0b1b9a"
+        android:textSize="12sp" />
+
+    <TextView
+        android:text="Quant"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtLQuantidade"
+        android:textStyle="bold"
+        android:textColorLink="#0b1b9a"
+        android:textSize="12sp"
+        android:elevation="1dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="10dp" />/>
+
+</LinearLayout>
