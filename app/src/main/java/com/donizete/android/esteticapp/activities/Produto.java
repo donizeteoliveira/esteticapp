@@ -12,6 +12,7 @@ public class Produto extends RealmObject {
     private String txtNome;
     private String txtCategoria;
     private String txtFornecedor;
+    private int vlQuant;
     private Double vlCliente;
     private double vlProfissional;
     private byte[] imgProduto;
@@ -46,6 +47,14 @@ public class Produto extends RealmObject {
 
     public void setTxtFornecedor(String txtFornecedor) {
         this.txtFornecedor = txtFornecedor;
+    }
+
+    public int getVlQuant() {
+        return vlQuant;
+    }
+
+    public void setVlQuant(int vlQuant) {
+        this.vlQuant = vlQuant;
     }
 
     public Double getVlCliente() {

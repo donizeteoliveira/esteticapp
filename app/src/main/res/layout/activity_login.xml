@@ -44,10 +44,11 @@
 
         <EditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:inputType="textEmailAddress"
             android:ems="10"
-            android:id="@+id/editText2" />
+            android:id="@+id/textEmail"
+            android:textSize="12sp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -62,8 +63,9 @@
             android:layout_height="wrap_content"
             android:inputType="textPassword"
             android:ems="10"
-            android:id="@+id/editText"
-            android:layout_weight="0" />
+            android:id="@+id/textPassword"
+            android:layout_weight="0"
+            android:textSize="12sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -80,6 +82,12 @@
             android:id="@+id/btnLogin"
             android:layout_marginTop="0dp"
             android:textSize="18dp" />
+
+        <Button
+            android:text="Novo Usuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnCadUsuario" />
     </LinearLayout>
 
 </LinearLayout>
