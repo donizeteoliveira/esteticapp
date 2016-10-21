@@ -1,7 +1,6 @@
 package com.donizete.android.esteticapp.activities;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -11,9 +10,6 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.donizete.android.esteticapp.R;
-import com.google.android.gms.appindexing.Action;
-import com.google.android.gms.appindexing.AppIndex;
-import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -23,9 +19,11 @@ import com.google.firebase.auth.FirebaseUser;
 public class LoginActivity extends AppCompatActivity {
     private EditText txtUser;
     private EditText txtPassword;
+    private Button btnCadUsuario;
 
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
+    public static final int CADASTRO_REQUEST=1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +32,20 @@ public class LoginActivity extends AppCompatActivity {
 
         txtUser = (EditText) findViewById(R.id.txtUser);
         txtPassword = (EditText) findViewById(R.id.txtPassword);
+
+
+
+
+        Button btnCadUsuario =(Button) findViewById(R.id.btnCadUsuario);
+
+        btnCadUsuario.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent cadastroIntent = new Intent(LoginActivity.this, UsuarioActivity.class);
+                startActivity(cadastroIntent);
+                finish();
+            }
+        });
 
         mAuth = FirebaseAuth.getInstance();
 
@@ -59,9 +71,6 @@ public class LoginActivity extends AppCompatActivity {
                         });
             }
         });
-
-
-
 
     }
 

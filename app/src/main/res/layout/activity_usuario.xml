@@ -4,12 +4,13 @@
     android:id="@+id/activity_usuario"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:orientation="vertical"
-    tools:context="com.donizete.android.esteticapp.UsuarioActivity">
+    tools:context="com.donizete.android.esteticapp.activities.UsuarioActivity">
+
 
     <LinearLayout
         android:orientation="horizontal"
@@ -41,18 +42,71 @@
 
     </LinearLayout>
 
-    <ListView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/lstUsers"
-        android:layout_weight="1" />
-
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:weightSum="1">
 
+        <TextView
+            android:text="Cadastro de Usuário"
+            android:layout_height="78dp"
+            android:id="@+id/textView3"
+            android:textSize="24sp"
+            android:textAlignment="center"
+            android:textColor="@color/colorAccent"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:textStyle="normal|bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="57dp"
+            android:inputType="textEmailAddress"
+            android:ems="10"
+            android:id="@+id/email"
+            android:hint="@string/login_user" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="61dp"
+            android:inputType="textPassword"
+            android:ems="10"
+            android:id="@+id/password"
+            android:hint="@string/login_password" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:text="Salvar"
+                android:layout_width="169dp"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:id="@+id/btnSalvar"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_weight="310"
+                android:textStyle="normal|bold" />
+
+            <Button
+                android:text="Cancel"
+                android:layout_width="169dp"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:id="@+id/btnCancel"
+                android:layout_weight="310"
+                android:textStyle="normal|bold"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:elevation="1dp" />
+        </LinearLayout>
     </LinearLayout>
 
 
