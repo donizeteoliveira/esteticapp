@@ -8,7 +8,7 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 import com.donizete.android.esteticapp.R;
-import com.donizete.android.esteticapp.activities.Produto;
+import com.donizete.android.esteticapp.model.Produto;
 
 import java.text.DecimalFormat;
 import java.util.List;
@@ -31,17 +31,17 @@ public class ProdutosAdapter extends ArrayAdapter<Produto> {
         Produto p = listaItens.get(position);
 
         TextView txtLayoutName = (TextView) formatoItemLista.findViewById(R.id.txtLName);
-        txtLayoutName.setText(p.getTxtNome());
+        txtLayoutName.setText(p.getNome());
 
         TextView txtLayoutFornecedor = (TextView) formatoItemLista.findViewById(R.id.txtLFornecedor);
-        txtLayoutFornecedor.setText(p.getTxtFornecedor());
+        txtLayoutFornecedor.setText(p.getFornecedor());
 
         TextView txtLayoutPriceClient = (TextView) formatoItemLista.findViewById(R.id.txtLPrice);
         DecimalFormat fmt = new DecimalFormat("R$ #,##0.00");
         txtLayoutPriceClient.setText(fmt.format(p.getVlCliente()));
 
         TextView txtLayoutQuantidfade = (TextView) formatoItemLista.findViewById(R.id.txtLQuantidade);
-        txtLayoutQuantidfade.setText(p.getTxtFornecedor());
+        txtLayoutQuantidfade.setText(p.getVlQuant());
 
         return formatoItemLista;
 

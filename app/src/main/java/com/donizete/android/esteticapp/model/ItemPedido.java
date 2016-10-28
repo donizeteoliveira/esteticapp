@@ -1,4 +1,4 @@
-package com.donizete.android.esteticapp.activities;
+package com.donizete.android.esteticapp.model;
 
 /**
  * Created by Donizete on 16/10/2016.

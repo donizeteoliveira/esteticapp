@@ -76,12 +76,12 @@ public class UsuarioActivity extends AppCompatActivity {
                         .addOnCompleteListener(UsuarioActivity.this, new OnCompleteListener<AuthResult>() {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
-                                Toast.makeText(UsuarioActivity.this, "createUserWithEmail:onComplete:" + task.isSuccessful(), Toast.LENGTH_SHORT).show();
+                                Toast.makeText(UsuarioActivity.this, "Usuário Criado com sucesso" + task.isSuccessful(), Toast.LENGTH_LONG).show();
                                 // progressBar.setVisibility(View.GONE);
 
                                 if (!task.isSuccessful()) {
                                     Toast.makeText(UsuarioActivity.this, "Falha na Autenticação. Entre em contato com o Administrador." + task.getException(),
-                                            Toast.LENGTH_SHORT).show();
+                                            Toast.LENGTH_LONG).show();
                                 } else {
                                     startActivity(new Intent(UsuarioActivity.this,MainActivity.class));
                                     finish();

@@ -3,7 +3,6 @@ package com.donizete.android.esteticapp.activities;
 import android.content.ContentValues;
 import android.content.Intent;
 import android.database.Cursor;
-import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -14,11 +13,8 @@ import android.widget.Toast;
 
 import com.donizete.android.esteticapp.Adapters.ProdutosAdapter;
 import com.donizete.android.esteticapp.R;
+import com.donizete.android.esteticapp.model.Produto;
 import com.donizete.android.esteticapp.util.DatabaseHelper;
-import com.google.android.gms.appindexing.Action;
-import com.google.android.gms.appindexing.AppIndex;
-import com.google.android.gms.appindexing.Thing;
-import com.google.android.gms.common.api.GoogleApiClient;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -46,13 +42,13 @@ public class MainActivity extends AppCompatActivity {
         btnCadastrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent cadastroIntent = new Intent(MainActivity.this, CadastroActivity.class);
+                Intent cadastroIntent = new Intent(MainActivity.this, FuncionarioActivity.class);
 
                 startActivityForResult(cadastroIntent, CADASTRO_REQUEST);
             }
         });
     }
-
+    /*
     private void addFixedProducts(){
 
         dbHelper = new DatabaseHelper(this);
@@ -85,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
         for (int i = 0; i < cursor.getCount(); i++) {
             Produto p = new Produto();
             p.setId(cursor.getInt(0));
-            p.setTxtNome(cursor.getString(1));
+            p.set(cursor.getString(1));
             p.setTxtCategoria(cursor.getString(2));
             p.setTxtFornecedor(cursor.getString(3));
             p.setVlCliente(cursor.getDouble(4));
@@ -106,7 +102,7 @@ public class MainActivity extends AppCompatActivity {
                 adaptador.notifyDataSetChanged();
             }
         }
-    }
+    }*/
 
 
 

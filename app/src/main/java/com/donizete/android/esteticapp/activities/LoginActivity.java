@@ -23,7 +23,6 @@ public class LoginActivity extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
-    public static final int CADASTRO_REQUEST=1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
