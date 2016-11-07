@@ -5,8 +5,10 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Html;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.database.sqlite.SQLiteDatabase;
 import android.widget.Toast;
@@ -32,19 +34,34 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ListView lista = (ListView) findViewById(R.id.lstProducts);
+        /*ListView lista = (ListView) findViewById(R.id.lstProducts);
         adaptador = new ProdutosAdapter(this, 0, produtos);
-        lista.setAdapter(adaptador);
+        lista.setAdapter(adaptador);*/
 
 
-        findViewById(R.id.lstProducts);
-        Button btnCadastrar = (Button) findViewById(R.id.btnCadastrar);
-        btnCadastrar.setOnClickListener(new View.OnClickListener() {
+        ImageButton imgBtnProdM = (ImageButton)findViewById(R.id.imgBtnProdMain);
+        imgBtnProdM.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent cadastroIntent = new Intent(MainActivity.this, FuncionarioActivity.class);
-
+                Intent cadastroIntent = new Intent(MainActivity.this, ProdutoActivity.class);
                 startActivityForResult(cadastroIntent, CADASTRO_REQUEST);
+            }
+        });
+
+        ImageButton imgBtnProdF = (ImageButton) findViewById(R.id.imgBtnFuncMain);
+        imgBtnProdF.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent funcionarioIntent = new Intent(MainActivity.this, FuncionarioActivity.class);
+                startActivityForResult(funcionarioIntent, CADASTRO_REQUEST);
+            }
+        });
+
+        ImageButton imgBtnProdS = (ImageButton)findViewById(R.id.imgBtnSairMain);
+        imgBtnProdS.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
             }
         });
     }

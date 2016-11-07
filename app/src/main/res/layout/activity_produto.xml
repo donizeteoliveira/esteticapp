@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_produto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    tools:context="com.donizete.android.esteticapp.activities.ProdutoActivity">
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:id="@+id/imageView2"
+            android:src="@drawable/estetica" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:text="Virtual Estetic      Produtos"
+                android:id="@+id/textView2"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:weightSum="1">
+
+                <EditText
+                    android:layout_width="192dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:id="@+id/pesquisaProd"
+                    android:hint="Pesquisa Nome" />
+
+                <ImageButton
+                    android:layout_width="44dp"
+                    android:layout_height="39dp"
+                    android:id="@+id/btnFindProd"
+                    android:layout_gravity="right"
+                    android:src="@android:drawable/ic_search_category_default" />
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"></LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="298dp"
+        android:layout_weight="0.23">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.40">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:ems="10"
+                        android:id="@+id/etCodProduto"
+                        android:layout_weight="1"
+                        android:hint="Codigo Produto"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:ems="10"
+                        android:id="@+id/etNomeProd"
+                        android:layout_weight="1"
+                        android:hint="Nome Produto"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="115dp"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/estetica"
+                        android:id="@+id/imageView4" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="300dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/etCategoria"
+            android:layout_weight="0.40"
+            android:hint="Categoria"
+            android:textSize="14sp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/etFornecedor"
+            android:layout_weight="0.40"
+            android:hint="Fornecedor"
+            android:textSize="14sp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/etVlCusto"
+            android:layout_weight="0.40"
+            android:hint="Valor Custo"
+            android:textSize="14sp"
+            android:gravity="right|center_vertical" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/etVlCliente"
+            android:layout_weight="0.40"
+            android:hint="Valor Cliente"
+            android:textSize="14sp"
+            android:gravity="right|center_vertical" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/etVlProfissional"
+            android:layout_weight="0.40"
+            android:hint="Valor Profissional"
+            android:textSize="14sp"
+            android:gravity="right|center_vertical" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/etqtdEstoque"
+                android:layout_weight="1"
+                android:hint="Quant Estoque"
+                android:textSize="14sp" />
+
+            <CheckBox
+                android:text="Ativo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rbStatus"
+                android:layout_weight="1"
+                android:checked="true" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:text="Salvar"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnSalvarProd"
+                android:layout_weight="0.43"
+                android:layout_width="90sp" />
+
+            <Button
+                android:text="Pedido"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnAlterarProd"
+                android:layout_width="90sp" />
+
+            <Button
+                android:text="Excluir"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnExcluirProd"
+                android:layout_weight="0.43"
+                android:layout_width="90sp" />
+
+            <Button
+                android:text="Sair"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnSairProd"
+                android:layout_weight="1"
+                android:layout_width="90sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

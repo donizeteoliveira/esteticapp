@@ -14,27 +14,31 @@ import io.realm.RealmObject;
  */
 @IgnoreExtraProperties
 public class Produto  {
-    private int id;
-    private String nome;
+    private String codProduto;
+    private String nomeProd;
     private String categoria;
     private String fornecedor;
-    private int vlQuant;
+    private int qtdEstoque;
+    private double vlCusto;
     private Double vlCliente;
     private double vlProfissional;
     private byte[] imgProduto;
+    private boolean status;
 
-    public int getId() { return id;  }
-
-    public void setId(int id) {
-        this.id = id;
+    public String getCodProduto() {
+        return codProduto;
     }
 
-    public String getNome() {
-        return nome;
+    public void setCodProduto(String codProduto) {
+        this.codProduto = codProduto;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public String getNomeProd() {
+        return nomeProd;
+    }
+
+    public void setNomeProd(String nomeProd) {
+        this.nomeProd = nomeProd;
     }
 
     public String getCategoria() {
@@ -53,12 +57,20 @@ public class Produto  {
         this.fornecedor = fornecedor;
     }
 
-    public int getVlQuant() {
-        return vlQuant;
+    public int getQtdEstoque() {
+        return qtdEstoque;
     }
 
-    public void setVlQuant(int vlQuant) {
-        this.vlQuant = vlQuant;
+    public void setQtdEstoque(int qtdEstoque) {
+        this.qtdEstoque = qtdEstoque;
+    }
+
+    public double getVlCusto() {
+        return vlCusto;
+    }
+
+    public void setVlCusto(double vlCusto) {
+        this.vlCusto = vlCusto;
     }
 
     public Double getVlCliente() {
@@ -85,16 +97,26 @@ public class Produto  {
         this.imgProduto = imgProduto;
     }
 
+    public boolean isStatus() {
+        return status;
+    }
+
+    public void setStatus(boolean status) {
+        this.status = status;
+    }
+
     public Map<String, Object> toMap() {
         HashMap<String, Object> result = new HashMap<>();
-        result.put("id", id);
-        result.put("nome", nome);
+        result.put("codProduto", codProduto);
+        result.put("nomeProd", nomeProd);
         result.put("categoria", categoria);
         result.put("fornecedor", fornecedor);
-        result.put("vlQuant", vlQuant);
+        result.put("qtdEstoque", qtdEstoque);
+        result.put("vlCusto", vlCusto);
         result.put("vLCliente", vlCliente);
         result.put("vlProfissional", vlProfissional);
         result.put("imgProduto", imgProduto);
+        result.put("estado", status);
 
         return result;
     }

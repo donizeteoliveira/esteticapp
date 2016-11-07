@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">EsteticApp</string>
     <string name="title_activity_maps">Map</string>
+    <string name="title_funcionario">Funcionario</string>
+    <string name="title_produto">Produto</string>
 
     <string name="login_button">Entrar</string>
     <string name="login_user">E-mail</string>

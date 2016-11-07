@@ -3,10 +3,6 @@
     package="com.donizete.android.esteticapp">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -33,7 +29,11 @@
             android:value="@integer/google_play_services_version" />
 
         <activity android:name=".activities.UsuarioActivity" />
-        <activity android:name=".activities.FuncionarioActivity"></activity>
+        <activity android:name=".activities.FuncionarioActivity" />
+        <activity android:name=".activities.ListFuncActivity" />
+        <activity android:name=".activities.ProdutoActivity" />
+        <activity android:name=".activities.ListProdActivity" />
+        <activity android:name=".activities.ListClieActivity"></activity>
     </application>
 
 </manifest>

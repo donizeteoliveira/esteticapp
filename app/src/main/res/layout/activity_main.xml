@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -10,68 +11,7 @@
     android:orientation="vertical"
     tools:context=".activities.MainActivity">
 
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
 
-        <ImageView
-            android:layout_width="114dp"
-            android:layout_height="match_parent"
-            android:id="@+id/imageView2"
-            android:src="@drawable/estetica" />
-
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="41dp"
-                android:text="Virtual Estetic"
-                android:id="@+id/textView2"
-                android:textSize="26dp"
-                android:textStyle="bold"
-                android:gravity="center" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Produto:"
-                android:id="@+id/textView3"
-                android:textSize="14dp"
-                android:textStyle="bold"
-                android:gravity="center" />
-
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="52dp">
-
-                <EditText
-                    android:layout_width="188dp"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/editText3" />
-
-                <ImageButton
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:id="@+id/btnFindProduto"
-                    android:layout_gravity="right"
-                    android:src="@android:drawable/ic_search_category_default" />
-
-            </LinearLayout>
-
-        </LinearLayout>
-
-    </LinearLayout>
-
-    <ListView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/lstProducts"
-        android:layout_weight="1" />
 
     <LinearLayout
         android:orientation="horizontal"
@@ -79,19 +19,77 @@
         android:layout_height="wrap_content"
         android:weightSum="1">
 
-        <Button
-            android:layout_width="wrap_content"
+        <ImageView
+            android:layout_width="114dp"
             android:layout_height="match_parent"
-            android:text="Venda Ok"
-            android:id="@+id/btnVendaOk"
-            android:layout_weight="0.85" />
+            android:id="@+id/imageView2"
+            android:src="@drawable/estetica"
+            android:layout_weight="1.65" />
 
-        <Button
-            android:layout_width="163dp"
-            android:layout_height="wrap_content"
-            android:text="Cadastrar"
-            android:id="@+id/btnCadastrar"
-            android:layout_weight="0.12" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="218dp"
+            android:layout_height="159dp"
+            android:layout_weight="0.74"
+            android:weightSum="1">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="41dp"
+                android:text="Virtual Estetic"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="254dp"
+                android:layout_height="match_parent"
+                android:weightSum="1">
+
+                <ImageButton
+                    android:layout_width="139dp"
+                    android:layout_height="97dp"
+                    app:srcCompat="?android:attr/actionModeCloseDrawable"
+                    android:id="@+id/imgBtnSairMain"
+                    android:scaleType="fitXY"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="50dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.85">
+
+        <ImageButton
+            android:layout_width="150dp"
+            android:layout_height="110dp"
+            app:srcCompat="@drawable/common_plus_signin_btn_icon_dark_focused"
+            android:id="@+id/imgBtnProdMain"
+            android:scaleType="fitXY"
+            android:layout_gravity="center" />
+
+        <ImageButton
+            app:srcCompat="@drawable/ic_setting_light"
+            android:id="@+id/imgBtnFuncMain"
+            android:layout_gravity="center"
+            android:scaleType="fitXY"
+            android:layout_width="150dp"
+            android:layout_height="110dp" />
     </LinearLayout>
 
 </LinearLayout>

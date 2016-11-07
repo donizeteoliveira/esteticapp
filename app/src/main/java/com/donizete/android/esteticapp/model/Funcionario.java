@@ -1,5 +1,7 @@
 package com.donizete.android.esteticapp.model;
 
+import android.widget.ImageView;
+
 import com.google.firebase.database.IgnoreExtraProperties;
 
 import java.util.HashMap;
@@ -11,30 +13,14 @@ import java.util.Map;
 @IgnoreExtraProperties
 public class Funcionario {
 
-    private String id;
-    private String matricula;
     private String nome;
     private String dtAdmissao;
     private String cpf;
     private String rg;
     private String email;
     private String telefone;
+    private String imgFunc;
 
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    public String getMatricula() {
-        return matricula;
-    }
-
-    public void setMatricula(String matricula) {
-        this.matricula = matricula;
-    }
 
     public String getNome() {
         return nome;
@@ -84,16 +70,19 @@ public class Funcionario {
         this.telefone = telefone;
     }
 
+    public String getImgfunc() { return imgFunc;   }
+
+    public void setImgfunc(String imgfunc) { this.imgFunc = imgfunc;  }
+
     public Map<String, Object> toMap(){
         HashMap<String, Object> result= new HashMap<>();
-        result.put("id", id);
-        result.put("matricula", matricula);
         result.put("nome", nome);
         result.put("dtAdmissao", dtAdmissao);
         result.put("cpf", cpf);
         result.put("rg", rg);
         result.put("email", email);
         result.put("telefone", telefone);
+        result.put("imgFunc", imgFunc);
 
         return result;
     }

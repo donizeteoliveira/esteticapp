@@ -16,18 +16,18 @@ import java.util.List;
 /**
  * Created by Donizete on 14/10/2016.
  */
-public class ProdutosAdapter extends ArrayAdapter<Produto> {
+public class ProdutosAdapter{
     private LayoutInflater mInflater;
     private List<Produto> listaItens;
 
-    public ProdutosAdapter(Context context, int resource, List<Produto> itensDaLista) {
+    /*public ProdutosAdapter(Context context, int resource, List<Produto> itensDaLista) {
         super(context, resource, itensDaLista);
         mInflater = LayoutInflater.from(context);
         listaItens = itensDaLista;
     }
 
     public View getView(int position, View convertView, ViewGroup parent) {
-        View formatoItemLista = mInflater.inflate(R.layout.layout_lista_produto, null);
+        View formatoItemLista = mInflater.inflate(R.layout.produto_list_view, null);
         Produto p = listaItens.get(position);
 
         TextView txtLayoutName = (TextView) formatoItemLista.findViewById(R.id.txtLName);
@@ -45,5 +45,5 @@ public class ProdutosAdapter extends ArrayAdapter<Produto> {
 
         return formatoItemLista;
 
-    }
+    }*/
 }
